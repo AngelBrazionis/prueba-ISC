@@ -26,7 +26,7 @@ resource "aws_subnet" "ob-public-subnet" {
 resource "aws_subnet" "ob-public-subnet2" {
   vpc_id                  = aws_vpc.vpc-ob.id
   cidr_block              = var.public_subnet2
-  availability_zone       = var.vpc_aws_az
+  availability_zone       = var.vpc_aws_az-2
   map_public_ip_on_launch = "true"
   tags = {
     Name = "terraform-ob-public-subnet2"
